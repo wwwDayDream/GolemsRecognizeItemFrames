@@ -40,7 +40,7 @@ jobs:
             gradle-
 
       - name: Build with Gradle
-        run: ./gradlew jar --parallel --no-daemon
+        run: ./gradlew build --parallel --no-daemon
 
       - name: List built jars
         run: find . -type f -name "*.jar"

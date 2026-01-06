@@ -2,8 +2,8 @@ plugins {
     id 'multiloader-loader'
     id 'fabric-loom'
 }
-tasks.jar {
-    enabled = false
+tasks.build {
+    dependsOn remapJar
 }
 dependencies {
     minecraft "com.mojang:minecraft:${minecraft_version}"
