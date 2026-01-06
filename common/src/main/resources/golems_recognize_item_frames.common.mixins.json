@@ -7,7 +7,7 @@
   "mixins": [],
   "client": [
     "TransportItemsBetweenContainersMixin",
-    "TransportItemsBetweenContainersAccessor""
+    "TransportItemsBetweenContainersAccessor"
   ],
   "server": [],
   "injectors": {
