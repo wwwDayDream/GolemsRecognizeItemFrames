@@ -29,11 +29,21 @@ jobs:
       - name: Make Gradle wrapper executable
         run: chmod +x ./gradlew
 
+      - name: Cache Gradle dependencies
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+          restore-keys: |
+            gradle-
+
       - name: Build with Gradle
-        run: ./gradlew build
+        run: ./gradlew jar --parallel --no-daemon
 
       - name: Capture Build Artifacts
         uses: actions/upload-artifact@v4
         with:
           name: Artifacts
-          path: /**/build/libs/*.jar
+          path: '**/build/libs/**/*.jar'
