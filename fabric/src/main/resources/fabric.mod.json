@@ -16,12 +16,12 @@
     "environment": "*",
     "entrypoints": {
         "main": [
-            "com.example.examplemod.ExampleMod"
+            "com.daydream.grif.GRIFFabricLoader"
         ]
     },
     "mixins": [
-        "${mod_id}.mixins.json",
-        "${mod_id}.fabric.mixins.json"
+        "${mod_id}.common.mixins.json",
+        "${mod_id}.mixins.json"
     ],
     "depends": {
         "fabricloader": ">=${fabric_loader_version}",
@@ -30,7 +30,6 @@
         "java": ">=${java_version}"
     },
     "suggests": {
-        "another-mod": "*"
     }
 }
   
