@@ -42,9 +42,6 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew build --parallel --no-daemon
 
-      - name: List built jars
-        run: find . -type f -name "*.jar"
-
       - name: Capture Build Artifacts
         uses: actions/upload-artifact@v4
         with:
